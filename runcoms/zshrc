@@ -11,3 +11,19 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+export N_PREFIX=$HOME/.n
+export BC_ENV_ARGS=$HOME/.bcargs
+export NNN_BMS='d:~/Documents;h:/home/brad;D:/Downloads;w:~/work'
+
+# load aliases
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
+
+#eval "$(starship init zsh)"
+eval spaceship_vi_mode_enable
+
+export PATH="$HOME/.npm/bin:$PATH"
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
